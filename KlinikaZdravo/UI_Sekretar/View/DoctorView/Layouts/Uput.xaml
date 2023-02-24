@@ -1,0 +1,44 @@
+﻿<Window x:Class="ProjekatHciDoktor.Layouts.Uput"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjekatHciDoktor.Layouts"
+             mc:Ignorable="d" 
+             Title="Izdavanje uputa" Height="210" Width="380" WindowStartupLocation="CenterScreen" Cursor="Arrow" ResizeMode="CanMinimize" Background="LightCyan">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="2" HorizontalAlignment="Center" Width="279" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="Uput za:" FontSize="16"/>
+            <Label Grid.Row="1" Content="Datum izdavanja:" FontSize="16" Margin="0,0.2,0.2,1.2" Grid.RowSpan="2"/>
+            <DatePicker Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Name="dateD" Focusable="False" Margin="0,5.2,0,16.6" Width="131"></DatePicker>
+
+            <Button Grid.Row="5" Grid.Column="2" Height="40" FontSize="16" Width="110" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Izdaj uput"
+                    Margin="0,15,0,0" ToolTip="Izdaj uput" Click="Povratak" Background="#FF319997"/>
+            <ComboBox x:Name="combo" Grid.Column="1" Height="30">
+                <ComboBoxItem IsSelected="True">internist</ComboBoxItem>
+                <ComboBoxItem>surgeon</ComboBoxItem>
+                <ComboBoxItem>ophthalmologist</ComboBoxItem>
+                <ComboBoxItem>pediatrician</ComboBoxItem>
+                <ComboBoxItem>ophthalmologist</ComboBoxItem>
+                <ComboBoxItem>dermatologist</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+
+    </Grid>
+</Window>

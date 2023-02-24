@@ -1,0 +1,29 @@
+﻿<Window x:Class="healthClinic.WarningWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:healthClinic"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Height="250" Width="450">
+    <Grid Background="#FFB9E8E5">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Da li ste sigurni da želite da se odjavite sa naloga?" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Foreground="DarkBlue" FontWeight="DemiBold" />
+        <Button Content="Da"  Foreground="White" Background="DarkBlue" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0.8,0.6,23.4,0" Width="87" Click="Button_Click" />
+        <Button Content="Ne"  Foreground="White" Background="DarkBlue" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="21.6,0.6,110.2,0" Width="89" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="ProjekatHciDoktor.Layouts.DnevniRaspored"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjekatHciDoktor.Layouts"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="1250" Background="White" Loaded="UserControl_Loaded" Focusable="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="2" BorderBrush="Black" Grid.Row="0">
+            <Label Content="Dnevni raspored pregleda/operacija" FontStyle="Italic" FontSize="16" FontWeight="Bold" Background="#FF319997"/>
+        </Border>
+        <StackPanel  Grid.Row="1" Orientation="Horizontal" Margin="20">
+            <Label Content="DAN:"/>
+            <DatePicker x:Name="dateD" ToolTip="Odaberite datum za prikaz" Keyboard.PreviewKeyUp="DatePicker_PreviewKeyUp"></DatePicker>
+            <TextBox x:Name="pretraga"  Height="30" TextWrapping="Wrap" FontSize="16" Margin="730,0,10,0" Width="300"  KeyDown="PretragaP"/>
+            <Button Width="20" Margin="5" Click="Pretraga">
+
+            </Button>
+        </StackPanel>
+        <DataGrid x:Name="tabel" RowHeight="40" IsReadOnly="True" Grid.Row="2"
+            SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left"
+                  VerticalAlignment="Top" ItemsSource="{Binding Termini}" AlternatingRowBackground="LightCyan" AlternationCount="0" MaxHeight="500"
+                  Width="Auto" Margin="20" SelectionChanged="DataGrid_SelectionChanged_1" FontSize="16" Background="LightCyan">
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseDoubleClick" Handler="Row_MouseDoubleClick"/>
+                </Style>
+            </DataGrid.ItemContainerStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Lekar" Binding="{Binding Path=DocotrName}" Width="*" />
+                <DataGridTextColumn Header="Vreme" Binding="{Binding Path=AvailableDate}" Width="*"/>
+                <DataGridTextColumn Header="Pacijent (br. kartona)" Binding="{Binding Path=PatientId}" Width="*"/>
+                <DataGridTextColumn Header="Tip" Binding="{Binding Path=Type}" Width="*"/>
+                <DataGridTextColumn Header="Status" Width="*" Binding="{Binding Path=Scheduled}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

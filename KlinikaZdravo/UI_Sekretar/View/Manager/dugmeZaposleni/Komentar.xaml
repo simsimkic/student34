@@ -1,0 +1,17 @@
+﻿<Window x:Class="Aplikacija.dugmeZaposleni.Komentar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeZaposleni"
+        mc:Ignorable="d"
+        Title="Komentar" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="420" Stroke="White" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0"/>
+        <TextBox x:Name="textKomentara" HorizontalAlignment="Left" Height="210" Margin="89,82,0,0" TextWrapping="Wrap" Text="Ostavite komentar..." VerticalAlignment="Top" Width="604" TextChanged="TextBox_TextChanged" GotFocus="fokus" IsEnabled="False"/>
+        <Button x:Name="izmijeni" Content="Izmijeni" HorizontalAlignment="Left" Margin="324,321,0,0" VerticalAlignment="Top" Width="118" Height="27" Click="izmijeniKomentar"/>
+        <Button x:Name="sacuvaj" Content="Sacuvaj" HorizontalAlignment="Left" Margin="324,367,0,0" VerticalAlignment="Top" Width="118" Height="27" Click="SacuvajIzmjene"/>
+        <Button x:Name="nazad" Content="Nazad" HorizontalAlignment="Left" Margin="596,367,0,0" VerticalAlignment="Top" Width="118" Height="27" Click="vratiSeNazad"/>
+
+    </Grid>
+</Window>

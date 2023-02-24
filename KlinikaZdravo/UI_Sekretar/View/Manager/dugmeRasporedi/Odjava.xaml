@@ -1,0 +1,26 @@
+﻿<Window x:Class="Aplikacija.dugmeRasporedi.Odjava"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeRasporedi"
+        mc:Ignorable="d"
+        Title="Odjava" Height="228.383" Width="346.617" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="316*"/>
+            <ColumnDefinition Width="27*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="198" Margin="-15,0,-3.6,0" Stroke="SkyBlue" VerticalAlignment="Top" Width="349" Grid.ColumnSpan="2"/>
+        <Image Margin="137,48,105,123.4" RenderTransformOrigin="-1.938,-2.841">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/icons/upit.png" />
+            </Image.Source>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" Margin="68,94,0,0" TextWrapping="Wrap" Text="Da li ste sigurni da zelite da se odjavite?" VerticalAlignment="Top" Width="266" Grid.ColumnSpan="2"/>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="89,136,0,0" VerticalAlignment="Top" Width="75" Click="Potvrda"/>
+        <Button Content="Odustani" HorizontalAlignment="Left" Margin="192,136,0,0" VerticalAlignment="Top" Width="75" Click="Odustani"/>
+
+    </Grid>
+</Window>
+

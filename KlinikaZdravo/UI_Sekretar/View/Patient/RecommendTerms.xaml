@@ -1,0 +1,137 @@
+﻿<Window x:Class="healthClinic.RecommendTerms"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:healthClinic"
+        mc:Ignorable="d" FontSize="15"
+        Title="Preporuka termina" Height="410" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid 
+          Width="490"
+          Background="#FFB9E8E5">
+
+        <Grid  Background="White"
+               Width="400"
+               Margin="45,30,45,162">
+
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,10,0,0" Height="32">
+                    <Label Content="Odaberite lekara:"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Left"
+                       FontWeight="DemiBold"
+                       Foreground="DarkBlue" />
+                    <ComboBox x:Name="lekar"
+                              FontSize="10"
+                              Foreground="DarkBlue"
+                              FontWeight="DemiBold"
+                              Background="White"
+                              Height="30"
+                              HorizontalAlignment="Right" 
+                              Width="120"
+                              Margin="10,0,0,0"
+                              >
+                        <ComboBoxItem x:Name="Lekar" >Jovan Lazović</ComboBoxItem>
+                        <ComboBoxItem>Lazar Mikić</ComboBoxItem>
+                        <ComboBoxItem>Milan Mišković
+                        </ComboBoxItem>
+                        <ComboBoxItem>Nikola Nikolić
+                        </ComboBoxItem>
+                        <ComboBoxItem>Tatjana Vasić
+                        </ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,5,0,0">
+                    <Label Content="Od:" 
+                           FontWeight="DemiBold"
+                           Foreground="DarkBlue"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+
+                    <DatePicker x:Name="od" Style="{StaticResource MaterialDesignDatePicker}" 
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"
+                       Width="117"
+                       Height="30"
+                       Margin="106,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,5,0,0">
+                    <Label Content="Do:" 
+                           FontWeight="DemiBold"
+                           Foreground="DarkBlue"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+
+                    <DatePicker x:Name="do" 
+                        Style="{StaticResource MaterialDesignDatePicker}" 
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"
+                       Width="117"
+                       Height="30"
+                       Margin="106,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,5,0,0">
+                    <Label Content="Prioritet:"
+                           FontWeight="DemiBold"
+                           Foreground="DarkBlue"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           />
+                    <ComboBox x:Name ="priritet" 
+                        Foreground="DarkBlue"
+                        FontWeight="DemiBold" 
+                        Background="White"
+                        Height="30"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right" 
+                        Width="120"
+                              Margin="67,0,0,0"
+                             >Lekar
+                        <ComboBoxItem>Period
+                        </ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+        <StackPanel Orientation="Horizontal"
+                            Margin="0,180,0,112">
+            <Button Content="Preporuči"
+                            HorizontalAlignment="Center" 
+                            Background="DarkBlue"  
+                            Margin="200,0,0,34" 
+                            Click="Button_Click_Confirm" Width="93" VerticalAlignment="Bottom" />
+        </StackPanel>
+
+        <Grid Background="White"
+              Margin="45,248,44,44">
+            <TextBlock Text="" x:Name="termin"
+                   FontSize="15"
+                   FontWeight="DemiBold"
+                   Foreground="DarkBlue" Margin="-2,-3,1,2"/>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal"
+                            Margin="0,300,0,16" >
+            <Button Content="Zakaži"
+                            HorizontalAlignment="Center" 
+                            Background="DarkBlue"  
+                            Margin="200,0,0,0" 
+                            Width="93"
+                    Click="Zakazi"/>
+        </StackPanel>
+
+
+
+        <Grid x:Name="recommend" Visibility="Visible">
+
+        </Grid>
+
+    </Grid>
+
+</Window>

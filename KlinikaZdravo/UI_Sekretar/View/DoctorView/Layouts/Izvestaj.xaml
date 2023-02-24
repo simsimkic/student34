@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="ProjekatHciDoktor.Layouts.Izvestaj"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjekatHciDoktor.Layouts"
+             mc:Ignorable="d" 
+d:DesignHeight="650" d:DesignWidth="1300" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="2" BorderBrush="Black" Grid.Row="0">
+            <Label Content="Izveštaj" FontStyle="Italic" FontSize="16"/>
+        </Border>
+        <Grid x:Name="IZV" Grid.Row="2" Margin="551,124.2,332,-160.8" HorizontalAlignment="Center" Width="417">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="Od:" FontSize="16"/>
+            <Label Grid.Row="1" Content="Do:" FontSize="16"/>
+
+            <DatePicker x:Name="dateod" Grid.Row="0" Grid.Column="1" ToolTip="Odaberite datum" Width="200"></DatePicker>
+            <DatePicker x:Name="datedo" Grid.Row="1" Grid.Column="1" ToolTip="Odaberite datum" Width="200"></DatePicker>
+            <Button Grid.Row="5" Grid.Column="2" Height="40" FontSize="16" Width="120" HorizontalAlignment="Right" Content="Preuzmi izveštaj" Margin="10" ToolTip="Preuzmi izveštaj" Click="Button_Click"/>
+        </Grid>
+
+    </Grid>
+</UserControl>
+

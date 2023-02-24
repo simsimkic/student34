@@ -1,0 +1,134 @@
+﻿<UserControl x:Class="healthClinic.Preporuka"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:healthClinic"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" Width="492.105">
+    <Grid x:Name="recommend"
+          Background="#FFB9E8E5" >
+       
+        <Grid  Background="White"
+               Width="400"
+               Height="200"
+               Margin="0,-100,0,0">
+
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,10,0,0" Height="32">
+                    <Label Content="Odaberite lekara:"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Left"
+                       FontWeight="DemiBold"
+                       Foreground="DarkBlue" />
+                    <ComboBox x:Name="lekar"
+                              FontSize="10"
+                              Foreground="DarkBlue"
+                              FontWeight="DemiBold"
+                              Background="White"
+                              Height="30"
+                              HorizontalAlignment="Right" 
+                              Width="120"
+                              Margin="30,0,0,0"
+                              >
+                        <ComboBoxItem x:Name="Lekar" >Jovan Lazović</ComboBoxItem>
+                        <ComboBoxItem>Lazar Mikić</ComboBoxItem>
+                        <ComboBoxItem>Milan Miskovic
+                        </ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,5,0,0">
+                    <Label Content="Od:" 
+                           FontWeight="DemiBold"
+                           Foreground="DarkBlue"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+
+                    <DatePicker Style="{StaticResource MaterialDesignDatePicker}" 
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"
+                       Width="120"
+                       Height="30"
+                       Margin="110,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,5,0,0">
+                    <Label Content="Do:" 
+                           FontWeight="DemiBold"
+                           Foreground="DarkBlue"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+
+                    <DatePicker Style="{StaticResource MaterialDesignDatePicker}" 
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"
+                       Width="120"
+                       Height="30"
+                       Margin="110,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,5,0,0">
+                    <Label Content="Prioritet:"
+                           FontWeight="DemiBold"
+                           Foreground="DarkBlue"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           />
+                    <ComboBox x:Name ="datum" 
+                        Foreground="DarkBlue"
+                        FontWeight="DemiBold" 
+                        Background="White"
+                        Height="30"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right" 
+                        Width="120"
+                              Margin="83,0,0,0"
+                             >
+                        <ComboBoxItem>Lekar
+                        </ComboBoxItem>
+                        <ComboBoxItem>Period
+                        </ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+        <StackPanel Orientation="Horizontal"
+                            Margin="0,249,0,150.6">
+            <Button Content="Potvrdi"
+                            HorizontalAlignment="Center" 
+                            Background="DarkBlue"  
+                            Margin="200,0,0,0" 
+                             Width="93" Click="Button_Click" />
+        </StackPanel>
+
+        <Grid Background="White"
+              Width="400"
+              Height="80"
+              Margin="0,230,0,0">
+
+            <Label Content="" x:Name="termin"
+                   FontSize="15"
+                   FontWeight="DemiBold"
+                   Foreground="DarkBlue"/>
+
+
+        </Grid>
+
+        <StackPanel Orientation="Horizontal"
+                            Margin="0,300,0,0" >
+            <Button Content="Zakaži"
+                            HorizontalAlignment="Center" 
+                            Background="DarkBlue"  
+                            Margin="200,0,0,0" 
+                            Width="93" />
+        </StackPanel>
+
+
+
+
+    </Grid >
+</UserControl>

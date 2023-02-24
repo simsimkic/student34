@@ -1,0 +1,53 @@
+﻿<Window x:Class="Aplikacija.dugmeSobe.Raspored"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:cmd="clr-namespace:Aplikacija.Commands"
+
+        xmlns:local="clr-namespace:Aplikacija.dugmeSobe"
+        mc:Ignorable="d"
+        Title="Raspored" Height="534.714" Width="796.552" WindowStartupLocation="CenterScreen">
+    <Window.CommandBindings>
+        <CommandBinding Command="cmd:RoutedCommands.DodajPregled" CanExecute="KreirajPregled_CanExecute" Executed="KreirajPregled_Executed"></CommandBinding>
+        <CommandBinding Command="cmd:RoutedCommands.IzbrisiPregled" CanExecute="IzbrisiPregled_CanExecute" Executed="IzbrisPregled_Executed"></CommandBinding>
+        <CommandBinding Command="cmd:RoutedCommands.IzmijeniPregled" CanExecute="IzmeniPregled_CanExecute" Executed="IzmeniPregled_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="505" Stroke="White" VerticalAlignment="Top" Width="800" Margin="0,0,-9.6,-0.2" ContextMenuClosing="otkaziiRenoviranje" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="37,40,0,0" TextWrapping="Wrap" Text="Sala broj:1" VerticalAlignment="Top" FontSize="15" Height="20" Width="80"/>
+        <DataGrid Name="podaciRaspored" HorizontalAlignment="Left" Height="360" Margin="0,88,0,0" VerticalAlignment="Top" Width="598"  ItemsSource="{Binding ListaRasporeda}" AutoGenerateColumns="False" CanUserAddRows="False" >
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="MediumAquamarine" />
+                    <Setter Property="FontWeight" Value="ExtraBlack" />
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Redni broj"  Binding="{Binding IDPregleda}"  Width="100"/>
+                <DataGridTextColumn Header="Vrijeme OD"  Binding="{Binding pocetak}"  Width="150"/>
+                <DataGridTextColumn Header="Vrijeme DO"  Binding="{Binding krajPegleda}" Width="150"/>
+                <DataGridTextColumn Header="Doktor"  Binding="{Binding ljekar}"  Width="200"/>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="podijeliDugme" Content="Podijeli salu" HorizontalAlignment="Left" Margin="661,218,0,0" VerticalAlignment="Top" Width="106" Click="podijela" Height="19"/>
+        <Button Name="izmijeniDugme" Content="Izmijeni" HorizontalAlignment="Left" Margin="661,268,0,0" VerticalAlignment="Top" Width="106" Height="20" Command="cmd:RoutedCommands.IzmijeniPregled"/>
+        <Button x:Name="dodajDugme" Content="Dodaj termin" HorizontalAlignment="Left" Margin="661,320,0,0" VerticalAlignment="Top" Width="106" Command="cmd:RoutedCommands.DodajPregled" Height="19" />
+        <Button Content="Vrati se nazad" HorizontalAlignment="Left" Margin="661,429,0,0" VerticalAlignment="Top" Width="106" Height="19" Click="nazad"/>
+        <TextBlock HorizontalAlignment="Left" Margin="323,40,0,0" TextWrapping="Wrap" Text="Za datum:" VerticalAlignment="Top" FontSize="15" Height="20" Width="67"/>
+        <TextBlock Name="zaDatum" HorizontalAlignment="Left" Height="23" Margin="395,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="izbrisiDugme" Content="Izbrisi termin" HorizontalAlignment="Left" Margin="661,371,0,0" VerticalAlignment="Top" Width="106" Height="20" Command="cmd:RoutedCommands.IzbrisiPregled" />
+        <CheckBox x:Name="renoviranje" Content="Renoviranje" HorizontalAlignment="Left" Margin="661,122,0,0" VerticalAlignment="Top" IsChecked="False" Click="klik" Width="93"/>
+    </Grid>
+</Window>

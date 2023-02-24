@@ -1,0 +1,46 @@
+﻿<Window x:Class="Aplikacija.dugmeRasporedi.pocetnaRasporedi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeRasporedi"
+        mc:Ignorable="d"
+        Title="Rasporedi" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="420" Margin="0,0,-0.4,0" Stroke="Black" VerticalAlignment="Top" Width="794"/>
+
+
+        <Image Margin="499,24,186,356">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/icons/klinika.png" />
+            </Image.Source>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="KLINIKA ZDRAVLJE" VerticalAlignment="Top" Margin="577,25,0,0" Width="205" Height="39" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Upravnik" VerticalAlignment="Top" Margin="51,28,0,0" Width="205" Height="39" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+
+
+        <Button Content="Pocetna strana" HorizontalAlignment="Left" Margin="662,341,0,0" VerticalAlignment="Top" Height="25" Width="93" Click="Pocetna"/>
+        <Button Content="Odjava" HorizontalAlignment="Left" Margin="662,385,0,0" VerticalAlignment="Top" Width="93" Height="25" Click="Odjava"/>
+
+        <Button Click="smjene" Margin="273,193,425.6,186">
+            <StackPanel Height="41" Width="95">
+                <Image
+			        Height="32"
+		        	Margin="32,4,30.2,4"
+			        Source="/Aplikacija;component/icons/rS.png"/>
+            </StackPanel>
+        </Button>
+        <Button  Click="godisnji" Margin="418,193,288.6,188">
+            <StackPanel Height="29" Width="36" RenderTransformOrigin="0.517,0.576">
+                <Image 
+			        Height="28"
+			        Margin="0,4"
+			        Source="/Aplikacija;component/icons/kalendar.png"/>
+            </StackPanel>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="291,237,0,0" TextWrapping="Wrap" Text="Smjene   " VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="405,237,0,0" TextWrapping="Wrap" Text="Godisnji odmori" VerticalAlignment="Top" FontSize="15" Width="120"/>
+
+
+    </Grid>
+</Window>

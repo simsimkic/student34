@@ -1,0 +1,109 @@
+﻿<Page x:Class="healthClinic.Comment"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:healthClinic"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1024"  Foreground="DarkBlue">
+    <Grid Background="#FFB9E8E5" Height="768" Width="1024">
+        <Grid x:Name="header">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+
+            <Button VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Height="66" Click="Button_Click_Back" HorizontalAlignment="Left" Width="104" Grid.ColumnSpan="2" Margin="9,17,0,0" Grid.RowSpan="2">
+                <Image Source="Images/arrow.png" Height="62" Width="74" RenderTransformOrigin="0.08,0.492"/>
+            </Button>
+            <Label Content="Klinika Zdravo" Grid.Row="1" Grid.Column="4" FontSize="22" FontWeight="DemiBold" Foreground="DarkBlue" RenderTransformOrigin="0.563,1.147" Grid.ColumnSpan="2" Margin="196.6,18,0,80.4" Grid.RowSpan="2" />
+            <Image Source="Images/technology__web__heart__rate_-512.png" Grid.Column="5" Grid.ColumnSpan="2" Margin="135.8,21,17,18.6" Grid.Row="1"/>
+
+        </Grid>
+
+
+        <Grid x:Name="ask">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Content="Postavi pitanje" FontWeight="DemiBold" Grid.Row="1"  Grid.Column="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" Foreground="DarkBlue" Margin="94.4,92,88,0" Grid.RowSpan="2"/>
+            <Label Content="Pišite nam Vaše komentare, pohvale, kritike i sugestije" FontWeight="DemiBold" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="6" VerticalAlignment="Bottom" Foreground="DarkBlue" FontSize="25" Margin="138,0,3,67" Grid.RowSpan="2"/>
+            <Label Content="po pitanju svi naših aktivnosti!" Grid.Row="3" FontWeight="DemiBold" Grid.Column="1" FontSize="25" Foreground="DarkBlue" Grid.ColumnSpan="6" Margin="137,30,4,15"/>
+
+            <Rectangle Grid.Column="2" Grid.ColumnSpan="6" Grid.RowSpan="3" Grid.Row="4" Margin="3.2,37,137,43">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <TextBox Grid.Column="2" Grid.ColumnSpan="6" Grid.RowSpan="3" Grid.Row="4" Margin="3.2,37,137,43">
+            </TextBox>
+            <Rectangle Grid.Column="2" Grid.ColumnSpan="6" Grid.RowSpan="2" Grid.Row="3" Margin="3.2,88,138,80">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+               
+            </Rectangle>
+            <TextBox Grid.Column="2" Grid.ColumnSpan="6" Grid.RowSpan="2" Grid.Row="3" Margin="3.2,88,138,80">
+            </TextBox>
+
+            <Label Content="Da li želite da pošaljete poruku anonimno?" FontWeight="DemiBold" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="6" FontSize="25" Foreground="DarkBlue" Margin="81.2,59,137,98" Grid.RowSpan="2"/>
+            <CheckBox Grid.Row="6" Grid.Column="2" IsChecked="False" Margin="16.2,58,74.6,3"/>
+            <Button Content="Pošalji" Background="DarkBlue" Grid.Column="3" Grid.Row="7" FontSize="22" Grid.ColumnSpan="2" Height="48" Margin="74.4,1,18.2,0" Click="Button_Click_Send" RenderTransformOrigin="0.43,-0.033" VerticalAlignment="Top"/>
+
+
+
+        </Grid>
+
+        <Grid x:Name="glavniProzor" Visibility="Visible" Grid.ColumnSpan="6" Grid.RowSpan="12" >
+
+        </Grid>
+    </Grid>
+</Page>

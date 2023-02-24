@@ -1,0 +1,29 @@
+﻿<Window x:Class="Aplikacija.dugmeSobe.upozorenjeIzmjena"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeSobe"
+        mc:Ignorable="d"
+        Title="upozorenje" Height="326.667" Width="575" WindowStartupLocation="CenterScreen">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,81,56">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.672"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="306" Margin="-5,3,-88,-65" Stroke="White" VerticalAlignment="Top" Width="580"/>
+        <Button x:Name="OK" Content="OK" HorizontalAlignment="Left" Margin="208,203,0,6" Width="150" Click="ok" RenderTransformOrigin="0.725,0.664"/>
+        <Image Margin="216,65,145,131" RenderTransformOrigin="-1.938,-2.841">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="50" UriSource="/icons/upozo.png" />
+            </Image.Source>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" Margin="124,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="69" Width="369" FontSize="20"><Run Text="Da biste izmijenili podatke morate selektovati red u tabeli!"/></TextBlock>
+
+    </Grid>
+</Window>
+

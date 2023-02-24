@@ -1,0 +1,39 @@
+﻿<Window x:Class="Aplikacija.dugmeApoteka.upozorenje2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeApoteka"
+        mc:Ignorable="d"
+        Title="upozorenje2" Height="353.226" Width="580.645" WindowStartupLocation="CenterScreen">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,81,56">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.672"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="328" Margin="2,1,-86.6,-61" Stroke="White" VerticalAlignment="Top" Width="578" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.242"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Button x:Name="dugmeNe" Content="Ne" HorizontalAlignment="Left" Margin="94,227,0,-12.4" VerticalAlignment="Top" Width="150" Height="35" Click="ne" RenderTransformOrigin="0.725,0.664"/>
+        <Image Margin="233,71,164.4,147" RenderTransformOrigin="-1.938,-2.841">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="50" UriSource="/icons/upit.png" />
+            </Image.Source>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" Margin="94,126,-28.6,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="428" FontSize="20"><Run Text="Da li ste sigurni da zelite da izbrisete lijek?"/></TextBlock>
+        <Button x:Name="dugmeDa" Content="Da" HorizontalAlignment="Left" Margin="284,227,0,-12.4" VerticalAlignment="Top" Width="150" Height="35" Click="da" RenderTransformOrigin="0.725,0.664"/>
+
+    </Grid>
+</Window>
+

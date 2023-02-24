@@ -1,0 +1,15 @@
+﻿<Window x:Class="Aplikacija.dugmeZaposleni.upozorenjelog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeZaposleni"
+        mc:Ignorable="d"
+        Title="Upozorenje" Height="207.938" Width="429.976" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="178" Stroke="Black" VerticalAlignment="Top" Width="423"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,61,0,0" TextWrapping="Wrap" Text="Pogresna sifra ili korisnicko ime, pokusajte ponovo" VerticalAlignment="Top" RenderTransformOrigin="-0.367,0.364" FontSize="15"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="177,103,0,0" VerticalAlignment="Top" Width="75" Click="ok"/>
+
+    </Grid>
+</Window>

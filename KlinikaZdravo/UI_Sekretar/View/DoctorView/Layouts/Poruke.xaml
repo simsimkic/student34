@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="ProjekatHciDoktor.Layouts.Poruke"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjekatHciDoktor.Layouts"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="1300" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="2" BorderBrush="Black" Grid.Row="0">
+            <Label Content="Primljenje poruke" FontStyle="Italic" FontSize="16" FontWeight="Bold" Background="#FF319997"/>
+        </Border>
+        <DataGrid x:Name="por" RowHeight="40" IsReadOnly="True" Grid.Row="2"
+            SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left"
+                  VerticalAlignment="Top" ItemsSource="{Binding Poruka}" AlternatingRowBackground="LightCyan" AlternationCount="0" Height="500"
+                  Width="Auto" Margin="20" FontSize="16" Background="LightCyan">
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseDoubleClick" Handler="Row_MouseDoubleClick"/>
+                </Style>
+            </DataGrid.ItemContainerStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Poslao" Binding="{Binding Path=SaljeA}" Width="*"/>
+                <DataGridTextColumn Header="Datum" Binding="{Binding Path=Datum}" Width="*"/>
+                <DataGridTextColumn Header="Naslov" Binding="{Binding Path=Naslov}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="3" Content="Nova poruka" Width="120" Height="40" HorizontalAlignment="Right" Margin="0,0,15,15" FontSize="16">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FF319997" Offset="1"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>

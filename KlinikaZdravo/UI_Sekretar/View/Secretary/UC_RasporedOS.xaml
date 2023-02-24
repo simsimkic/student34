@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="UI_sekretar.UC_RasporedOS"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UI_sekretar"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="675" d:DesignWidth="390">
+  <Grid Width="390" 
+          Height="675"
+          VerticalAlignment="Bottom"
+          Background="White">
+        <StackPanel Orientation="Vertical"
+                    Margin="0,35,0,0">
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,20,0,0">
+                <TextBlock Text="Izaberite operacionu salu: "
+                           FontSize="18"
+                           Margin="10,25,0,0"/>
+                <ComboBox Style="{StaticResource MaterialDesignComboBox}"
+                          Height="45"
+                          Width="160"
+                          FontSize="15"
+                          Margin="5,0,0,0"
+                          x:Name="cbSale"
+                          SelectionChanged="cbSale_SelectionChanged">
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,10,0,0">
+                <TextBlock Text="Izaberite datum:"
+                           FontSize="18"
+                           Margin="10,25,0,0"/>
+                <DatePicker Style="{StaticResource MaterialDesignDatePicker}"
+                            Height="45"
+                            x:Name="datumOperacije"
+                            Width="160"
+                            FontSize="15"
+                            Margin="80,0,0,0"
+                            SelectedDateChanged="datumOperacije_SelectedDateChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical"
+                            Margin="15,10,0,0">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                            Margin="15"
+                            Name="btnZakazi" Click="btnZakazi_Click">
+                        <Image Source="C:\Users\Milica\Desktop\HCI\UI_sekretar\UI_sekretar\Icons\add.png"
+                                           Height="30"
+                                           Width="30"/>
+                    </Button>
+                    <TextBlock Text="Zakaži operaciju"
+                               FontSize="15"
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical"
+                            Margin="30,10,0,0">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                            x:Name="btnOtkazi"
+                            Margin="15" Click="btnOtkazi_Click">
+                        <Image Source="C:\Users\Milica\Desktop\HCI\UI_sekretar\UI_sekretar\Icons\delete.png"
+                                           Height="30"
+                                           Width="30"/>
+                    </Button>
+                    <TextBlock Text="Otkaži operaciju"
+                               FontSize="15"
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Text="Raspored izabrane operacione sale:"
+                       FontSize="18"
+                       Margin="10,10,0,0"/>
+            <DataGrid x:Name="dgPatients"
+                      Height="320"
+                      Width="350"
+                      AutoGenerateColumns="False"
+                      Margin="0,10,0,0">
+                <DataGrid.Columns >
+                    <DataGridTextColumn x:Name="vreme" Header="Pocetak"
+                                        Binding="{Binding PocetakOperacije}"/>
+                    <DataGridTextColumn x:Name="sala" Header="Kraj"
+                                        Binding="{Binding KrajOperacije}"/>
+                    <DataGridTextColumn x:Name="ime" Header="Ime"
+                                        Binding="{Binding Pacijent.Ime}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

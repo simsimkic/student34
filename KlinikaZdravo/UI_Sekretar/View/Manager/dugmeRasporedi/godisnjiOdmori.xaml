@@ -1,0 +1,48 @@
+﻿<Window x:Class="Aplikacija.dugmeRasporedi.godisnjiOdmori"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeRasporedi"
+        mc:Ignorable="d"
+        Title="Godisnji odmori" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="420" Stroke="Black" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0"/>
+        <Image Margin="499,24,186,356">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/icons/klinika.png" />
+            </Image.Source>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="KLINIKA ZDRAVLJE" VerticalAlignment="Top" Margin="577,25,0,0" Width="205" Height="39" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Upravnik" VerticalAlignment="Top" Margin="51,28,0,0" Width="205" Height="39" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+        <DataGrid Name="podaciGodisnji" CanUserAddRows="False"  HorizontalAlignment="Left" Height="265" Margin="158,100,0,0" VerticalAlignment="Top" Width="450">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="MediumAquamarine" />
+                    <Setter Property="FontWeight" Value="ExtraBlack" />
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID"  Binding="{Binding ID}" Width="150"/>
+                <DataGridTextColumn Header="Zaposleni"  Binding="{Binding zaposleni}" Width="150"/>
+                <DataGridTemplateColumn Header="Godisnji odmori" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="Termin" Content="termin" Click="Termin_Click" CommandParameter="{Binding Path=zaposleni}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="662,385,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click"/>
+
+
+    </Grid>
+</Window>

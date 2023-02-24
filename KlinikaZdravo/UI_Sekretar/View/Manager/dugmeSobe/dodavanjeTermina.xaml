@@ -1,0 +1,57 @@
+﻿<Window x:Class="Aplikacija.dugmeSobe.dodavanjeTermina"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:cmd="clr-namespace:Aplikacija.Commands"
+
+        xmlns:local="clr-namespace:Aplikacija.dugmeSobe"
+        mc:Ignorable="d"
+ 
+        Title="Dodavanje termina" Height="265.086" Width="423.706" WindowStartupLocation="CenterScreen">
+    <Window.CommandBindings>
+        <CommandBinding Command="cmd:RoutedCommands.SnimiPregled" CanExecute="KreirajPregled_CanExecute" Executed="KreirajPregled_Executed"></CommandBinding>
+        <CommandBinding Command="cmd:RoutedCommands.OdustaniPregled" CanExecute="Odustani_CanExecute" Executed="Odustani_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <Grid Margin="0,0,3.6,0.2">
+
+        <Rectangle Name="tema" Height="235" Stroke="White" VerticalAlignment="Top" RenderTransformOrigin="-1.511,-0.708" HorizontalAlignment="Left" Width="414" Margin="0,1,0,-1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="104,53,0,0" TextWrapping="Wrap" Text="OD:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="104,104,0,0" TextWrapping="Wrap" Text="DO:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="104,147,0,0" TextWrapping="Wrap" Text="DOKTOR:" VerticalAlignment="Top"/>
+        <materialDesign:TimePicker
+            materialDesign:HintAssist.Hint=""
+            Name="tp1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Width="147"
+            Margin="0,37,104,0"
+            Foreground="Black"
+            BorderBrush="Black"
+            Background="White" FontSize="10" Height="32" IsEnabled="True"/>
+        <materialDesign:TimePicker
+            materialDesign:HintAssist.Hint=""
+            x:Name="tp1_Copy"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Width="147"
+            Margin="0,88,104,0"
+            Foreground="Black"
+            BorderBrush="Black"
+            Background="White" FontSize="10" Height="32" IsEnabled="True"/>
+        <ComboBox Name="combo" HorizontalAlignment="Left" Margin="193,147,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Marko Markovic-opsta praksa" IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem Content="Pera Peric-hirurg"></ComboBoxItem>
+            <ComboBoxItem Content="Mika Mikic-ortoped"></ComboBoxItem>
+            <ComboBoxItem Content="Djura Djuric-nefrolog"></ComboBoxItem>
+            <ComboBoxItem Content="Jovan Jovic-anesteziolog"></ComboBoxItem>
+            <ComboBoxItem Content="Ana Anic-pedjatar"></ComboBoxItem>
+            <ComboBoxItem Content="Jelena Jelic-endokrinolog"></ComboBoxItem>
+    
+
+        </ComboBox>
+        <Button Content="Potvrdi" HorizontalAlignment="Left" Margin="118,195,0,0" VerticalAlignment="Top" Width="75"  Command="cmd:RoutedCommands.SnimiPregled"/>
+        <Button Content="Otkazi" HorizontalAlignment="Left" Margin="221,195,0,0" VerticalAlignment="Top" Width="75"  Command="cmd:RoutedCommands.OdustaniPregled"/>
+    </Grid>
+</Window>

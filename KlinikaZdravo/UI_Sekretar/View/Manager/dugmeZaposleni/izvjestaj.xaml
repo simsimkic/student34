@@ -1,0 +1,25 @@
+﻿<Window x:Class="Aplikacija.dugmeZaposleni.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeZaposleni"
+        mc:Ignorable="d"
+        Title="Izvjestaj o planu rada ljekara" Height="504" Width="798" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,-2">
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="476" Stroke="SkyBlue" VerticalAlignment="Top" Width="790"/>
+        <TextBlock HorizontalAlignment="Left" Margin="252,28,0,0" TextWrapping="Wrap" Text="Izvjestaj o planu rada" VerticalAlignment="Top" Height="43" Width="276" FontSize="25" TextDecorations="{x:Null}" FontFamily="Book Antiqua"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="162" FontSize="15" FontWeight="Bold"><Run Text="Ime : "/><InlineUIContainer>
+                <TextBlock x:Name="ime" TextWrapping="Wrap" Text="Marko Markovic"/>
+            </InlineUIContainer></TextBlock>
+
+        <TextBox x:Name="textIzvjestaja" HorizontalAlignment="Left" Height="271" Margin="52,113,0,0" TextWrapping="Wrap" Text="Tekst izvjestaja..." VerticalAlignment="Top" Width="530" TextChanged="TextBox_TextChanged" IsEnabled="False" GotFocus="fokus">
+   
+        </TextBox>
+        <Button Content="Izmijeni" HorizontalAlignment="Left" Margin="632,358,0,0" VerticalAlignment="Top" Width="94" RenderTransformOrigin="0.44,1.409" Height="26" Click="izmijeniIzvjestaj"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="632,418,0,0" VerticalAlignment="Top" Width="94" RenderTransformOrigin="0.44,1.409" Height="28" Click="nazad"/>
+        <Button x:Name="izmjene" Content="Sacuvaj" HorizontalAlignment="Left" Margin="632,296,0,0" VerticalAlignment="Top" Width="94" RenderTransformOrigin="0.44,1.409" Height="26" Click="sacuvaj"/>
+        <Button Content="PDF" HorizontalAlignment="Left" Margin="632,242,0,0" VerticalAlignment="Top" Width="94" Height="26" Click="pdf"/>
+
+    </Grid>
+</Window>

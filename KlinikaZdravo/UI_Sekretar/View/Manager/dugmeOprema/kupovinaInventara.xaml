@@ -1,0 +1,25 @@
+﻿<Window x:Class="Aplikacija.dugmeOprema.kupovinaInventara"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeOprema"
+                xmlns:cmd="clr-namespace:Aplikacija.Commands"
+
+        mc:Ignorable="d"
+     
+        Title="kupovina inventara" Height="353.868" Width="529.088" WindowStartupLocation="CenterScreen">
+    <Window.CommandBindings>
+        <CommandBinding Command="cmd:RoutedCommands.SnimiOpremu" CanExecute="Dodaj_CanExecute" Executed="Dodaj_Executed"></CommandBinding>
+        <CommandBinding Command="cmd:RoutedCommands.OdustaniOpremu" CanExecute="Odustani_CanExecute" Executed="Odustani_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <Grid Margin="0,0,2.8,-19.6">
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="333" Stroke="White" VerticalAlignment="Top" Width="534" Margin="-4,1,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="133,40,0,0" TextWrapping="Wrap" Text="Unesite sledece podatke:" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox  Name="sta" HorizontalAlignment="Left" Height="23" Margin="133,127,0,0" TextWrapping="Wrap" Text="INVENTAR KOJI KUPUJETE?" VerticalAlignment="Top" Width="220" FontSize="15" Foreground="#FF5D4D4D" Background="#FFF4EAEA" GotMouseCapture="fokus" LostFocus="fokusx"/>
+        <TextBox Name="kolicina" HorizontalAlignment="Left" Height="23" Margin="133,182,0,0" TextWrapping="Wrap" Text="KOLICINA?" VerticalAlignment="Top" Width="220" FontSize="15" Background="#FFF4EEEE" Foreground="#FF5A4747" GotMouseCapture="kol" LostFocus="fokussx"/>
+        <Button Content="Odustani" HorizontalAlignment="Left" Margin="278,252,0,0" VerticalAlignment="Top" Width="75" Command="cmd:RoutedCommands.OdustaniOpremu" />
+        <Button Content="Kupi" HorizontalAlignment="Left" Margin="133,252,0,0" VerticalAlignment="Top" Width="75" Command="cmd:RoutedCommands.SnimiOpremu"/>
+
+    </Grid>
+</Window>

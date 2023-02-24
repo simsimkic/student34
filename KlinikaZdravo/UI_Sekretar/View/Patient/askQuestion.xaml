@@ -1,0 +1,105 @@
+﻿<Page x:Class="healthClinic.askQuestion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:healthClinic"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1024">
+
+    <Grid Background="#FFB9E8E5" Height="768" Width="1024">
+        <Grid x:Name="header">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Height="66" Click="Button_Click_Back" HorizontalAlignment="Left" Width="88">
+                <Image Source="Images/arrow.png" Height="62" Width="74" RenderTransformOrigin="0.08,0.492"/>
+            </Button>
+            <Label Content="Klinika Zdravo" Grid.Row="1" Grid.Column="4" FontSize="22" FontWeight="DemiBold" Foreground="DarkBlue" Grid.ColumnSpan="2" Margin="196.6,19,0,80.4" Grid.RowSpan="2" />
+            <Image Source="Images/technology__web__heart__rate_-512.png" Grid.Column="5" Grid.ColumnSpan="2" Margin="139.8,17,13,22.6" Grid.Row="1"/>
+
+        </Grid>
+
+
+        <Grid x:Name="ask">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Content="Postavi pitanje" FontWeight="DemiBold" Grid.Row="2"  Grid.Column="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="35" Foreground="DarkBlue"/>
+            <Label Content="Odaberite lekara:" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" FontSize="25" Foreground="DarkBlue" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="1.2,32,75.4,29"/>
+
+
+            <TextBox x:Name="content" Grid.Row="4" Grid.Column="2" 
+                     Grid.ColumnSpan="6"
+                     Grid.RowSpan="3"
+                     Background="White" Margin="0,0,138,18">
+            </TextBox>
+
+            <Button Content="Pošalji" Background="DarkBlue" Grid.Column="3" Grid.Row="6" FontSize="22" Grid.ColumnSpan="3" Height="Auto" Margin="121.2,55,112.2,1" Click="Button_Click_Send"/>
+
+            <ComboBox Background="White" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="31.6,36,4,27" Width="246" Height="41">
+                <ComboBoxItem FontSize="25" Foreground="DarkBlue">
+                    Pera Perić
+                </ComboBoxItem>
+                <ComboBoxItem FontSize="25" Foreground="DarkBlue">
+                    Nikola Aleksic
+                </ComboBoxItem>
+                <ComboBoxItem FontSize="25" Foreground="DarkBlue">
+                    Ana Petrovic
+                </ComboBoxItem>
+            </ComboBox>
+
+
+
+        </Grid>
+
+        <Grid x:Name="glavniProzor" Visibility="Visible" Grid.ColumnSpan="6" Grid.RowSpan="12" >
+
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,138 @@
+﻿<Window x:Class="Aplikacija.dugmeSobe.pocetnaSobe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeSobe"
+        mc:Ignorable="d"
+        Title="pocetna sobe" Height="493.054" Width="878.879" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,1.8,-0.4">
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="470" Margin="0,0,-3,-12" Stroke="White" VerticalAlignment="Top" Width="874" RenderTransformOrigin="0.084,1.006">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.226"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.302"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Button x:Name="Odjava" Content="Nazad" HorizontalAlignment="Left" Margin="730,400,0,0" VerticalAlignment="Top" Width="105" Click="odjava" Height="23" />
+        <Image Margin="573,10,223,394" RenderTransformOrigin="0.793,0.7">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/icons/klinika.png" />
+            </Image.Source>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="KLINIKA ZDRAVLJE" VerticalAlignment="Top" Margin="653,25,0,0" Width="205" Height="39" FontSize="20" FontWeight="Bold" FontStyle="Italic" Grid.ColumnSpan="2"/>
+        <Button Margin="74,142,710,278" Click="soba1">
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/bolnica.png" />
+            </StackPanel>
+        </Button>
+        <Button Margin="74,219,710,202" >
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/pre.jpg" />
+            </StackPanel>
+        </Button>
+        <Button Margin="196,219,588,202">
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/pre.jpg" />
+            </StackPanel>
+        </Button>
+        <Button Margin="314,219,470,202">
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/pre.jpg" />
+            </StackPanel>
+        </Button>
+        <Button Margin="430,219,353,202" >
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/pre.jpg" />
+            </StackPanel>
+        </Button>
+        <Button Margin="549,219,234,203" >
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/pre.jpg" />
+            </StackPanel>
+        </Button>
+        <Button Margin="668,219,115,202" >
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/pre.jpg" />
+            </StackPanel>
+        </Button>
+        <Button Margin="668,142,115,277" >
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/bolnica.png" />
+            </StackPanel>
+        </Button>
+        <Button Margin="549,142,234,278" >
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/bolnica.png" />
+            </StackPanel>
+        </Button>
+        <Button Margin="430,142,353,279" >
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/bolnica.png" />
+            </StackPanel>
+        </Button>
+        <Button Margin="314,142,469,277" >
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/bolnica.png" />
+            </StackPanel>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="95,183,0,0" TextWrapping="Wrap" Text="Sala 1" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="220,183,0,0" TextWrapping="Wrap" Text="Sala 2" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="338,183,0,0" TextWrapping="Wrap" Text="Sala 3" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="450,183,0,0" TextWrapping="Wrap" Text="Sala 4" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="573,183,0,0" TextWrapping="Wrap" Text="Sala 5" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="692,183,0,0" TextWrapping="Wrap" Text="Sala 6" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.855,0.595"/>
+        <TextBlock HorizontalAlignment="Left" Margin="78,261,0,0" TextWrapping="Wrap" Text="Ordinacija 1 " VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="204,261,0,0" TextWrapping="Wrap" Text="Ordinacija 2" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="322,260,0,0" TextWrapping="Wrap" Text="Ordinacija 3" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="430,261,0,0" TextWrapping="Wrap" Text="Ordinacija 4" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="549,260,0,0" TextWrapping="Wrap" Text="Ordinacija 5" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="668,261,0,0" TextWrapping="Wrap" Text="Ordinacija 6" VerticalAlignment="Top" FontSize="15"/>
+        <Button Margin="196,143,587,277.6" >
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="32"
+                    Margin="4,4,4,4"
+                    Source="/Aplikacija;component/icons/bolnica.png" />
+            </StackPanel>
+        </Button>
+        <Button Content="Dodatne sale" HorizontalAlignment="Left" Margin="586,400,0,0" VerticalAlignment="Top" Width="98" Height="23" Click="dodatne"/>
+
+    </Grid>
+</Window>

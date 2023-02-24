@@ -1,0 +1,65 @@
+﻿<Window x:Class="healthClinic.Logovanje"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:healthClinic"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Height="768" Width="1024" ResizeMode="CanResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Background="#FFB9E8E5" Height="768" Width="1024">
+
+
+        <TextBlock Text="Klinika Zdravo" FontSize="40" FontWeight="DemiBold" Foreground="DarkBlue" HorizontalAlignment="Center"  Margin="349,125,394,574" Width="281" />
+        <Image Source="C:\Users\Korisnik\Desktop\Bank-Demo-master\klinikazdravlje-master\KlinikaZdravo\UI_Sekretar\Icons\heart.png" Margin="528,113,193,576"   />
+
+        <StackPanel x:Name="panel" Background="White" Margin="200,200,200,200">
+            
+            <TextBox Name="username" materialDesign:HintAssist.Hint="Korisničko ime" 
+                     Style="{StaticResource ResourceKey=MaterialDesignFloatingHintTextBox}"
+                     FontSize="25" 
+                     FontWeight="DemiBold"
+                     HorizontalAlignment="Center"
+                     Margin="104,0,94.2,0" 
+                     Width="361"
+                     Height="116"
+                     >
+                <TextBox.Text>
+                    <Binding Path="KorisnickoIme"
+                         UpdateSourceTrigger="PropertyChanged"
+                         >
+                        <Binding.ValidationRules>
+                            <local:ValidationUsername
+                            ValidationStep="RawProposedValue"/>
+
+                        </Binding.ValidationRules>
+                    </Binding>
+
+                </TextBox.Text>
+            </TextBox>
+            <PasswordBox x:Name="password"
+                         materialDesign:HintAssist.Hint="Lozinka" 
+                         Style="{StaticResource ResourceKey=MaterialDesignFloatingHintPasswordBox}" 
+                         FontSize="25" 
+                         FontWeight="DemiBold"
+                         HorizontalAlignment="Center" 
+                         Margin="104,0,94.2,0"
+                         Width="361" Height="87">
+            </PasswordBox>
+
+
+
+            <TextBlock Text="Sačuvaj unesene podatke?" FontSize="25" FontWeight="DemiBold" Foreground="DarkBlue" Margin="137,0" Height="46"/>
+            <CheckBox IsChecked="False" Height="41" Margin="478,-55,86,0"   />
+            <TextBlock FontSize="25" FontWeight="DemiBold" Foreground="DarkBlue" Margin="137,0,111,0" Height="74"><Run Text="Još uvek nemate nalog?"/><LineBreak/><Run Text="Napravite ga sada!"/><LineBreak/><Run/></TextBlock>
+            <Button Height="71" Margin="383,-70,66.2,0" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click">
+                <Image Source="Images/unnamed (4).png" Width="74" Height="59"/>
+            </Button>
+        </StackPanel>
+        <Button Content="Potvrdi"  Background="DarkBlue" FontSize="25" Height="Auto" Margin="425,541,425,172"  Click="Button_Click_1" />
+
+        <Grid x:Name="glavniProzor"  />
+        <Frame x:Name="frejm" />
+    </Grid>
+
+</Window>

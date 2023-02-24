@@ -1,0 +1,27 @@
+﻿<Window x:Class="ProjekatHciDoktor.Layouts.Pregledd"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             Title="Pregled" Height="550" Width="600" WindowStartupLocation="CenterScreen" Cursor="Arrow" ResizeMode="CanMinimize" Background="LightCyan">
+    <Grid Margin="20" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="Dijagnoza:" FontSize="16" HorizontalAlignment="Left" Width="100"/>
+        <Label Grid.Row="1" Content="Terapija:" FontSize="16" HorizontalAlignment="Left" Width="100"/>
+        <TextBox x:Name="dij" Grid.Column="1" Height="200" Width="400" VerticalAlignment="Top">
+        </TextBox>
+        <TextBox x:Name="ter" Grid.Column="1" Grid.Row="1" Height="200" Width="400" VerticalAlignment="Top">
+        </TextBox>
+        <Button Grid.Row="3" Grid.Column="1" Height="40" FontSize="16" Width="110" HorizontalAlignment="Right" Content="Završi pregled" Margin="0,10,0,10" 
+                    ToolTip="Izdaj recept" Click="Unesi" Background="#FF319997"/>
+    </Grid>
+</Window>

@@ -1,0 +1,85 @@
+﻿<Window x:Class="Aplikacija.pocetnaUpravnik"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija"
+        mc:Ignorable="d"
+        Title="Pocetna Upravnik" Height="442.5" Width="891.5" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,2,-20">
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="423" Stroke="White" VerticalAlignment="Top" Width="882" RenderTransformOrigin="0.084,1.006"/>
+        <Button Margin="44,25,740,353" Click="nalog">
+            <StackPanel Height="103" Width="54">
+                <Image
+			Height="32"
+			Margin="4,4,4,4"
+			Source="icons/userrr.png" />
+            </StackPanel>
+        </Button>
+        <TextBlock Text="Moj nalog" Margin="55,80,614.8,314.8" FontSize="18">
+
+        </TextBlock>
+
+        <Button Margin="205,130,572,248" Click="zaposleni">
+            <StackPanel Height="38" Width="44">
+                <Image
+			Height="32"
+			Margin="0,4"
+			Source="icons/zaposleni2.png" />
+            </StackPanel>
+        </Button>
+        <TextBlock Text="Zaposleni" Margin="223,185,467.8,209.8" FontSize="18">
+
+        </TextBlock>
+        <Button x:Name="Apoteka" Margin="364,130,408,248" Click="apoteka">
+            <StackPanel Height="48" Width="52">
+                <Image
+                    Height="38"
+                    Margin="10,4,4,4"
+                    Source="icons/medicine.png" />
+            </StackPanel>
+        </Button>
+        <Button Margin="519,130,258,248" Click="sale">
+            <StackPanel Height="48" Width="69">
+                <Image x:Name="Sala"
+                    Height="36"
+                    Margin="4,4,3.8,4"
+                    Source="icons/rooms2.png" />
+            </StackPanel>
+        </Button>
+        <Button Margin="449,223,327.8,154.8" Click="oprema">
+            <StackPanel Height="103" Width="54">
+                <Image
+                    Height="42"
+                    Margin="-24,4,10.4,4"
+                    Source="icons/oprema2.png" HorizontalAlignment="Right" Width="68" RenderTransformOrigin="-0.34,0.524" />
+            </StackPanel>
+        </Button>
+        <Button Margin="284,223,492.8,154.8" Click="Rasporedi">
+            <StackPanel Height="48" Width="54">
+                <Image
+                    Height="42"
+                    Margin="4,4,0,4"
+                    Source="icons/raspored2.png" />
+            </StackPanel>
+        </Button>
+        <TextBlock Text="Apoteka" Margin="385,185,385.8,209.8" FontSize="18"/>
+        <TextBlock Text="Sobe" Margin="549,180,189.8,214.8" FontSize="18"/>
+        <TextBlock Text="Oprema" Margin="476,278,226.8,116.8" FontSize="18"/>
+        <TextBlock Text="Rasporedi" Margin="303,278,384.8,116.8" FontSize="18"/>
+        <Button x:Name="komentar" Content="Ostavite komentar" HorizontalAlignment="Left" Margin="730,311,0,0" VerticalAlignment="Top" Width="105" Click="ostaviKomentar" Height="25"/>
+        <Button x:Name="Odjava" Content="Odjavi se" HorizontalAlignment="Left" Margin="730,361,0,0" VerticalAlignment="Top" Width="105" Click="odjava" Height="25"/>
+        <ComboBox Text="jezik" Margin="703,102,47.8,302.8">
+            <ComboBoxItem IsSelected="True" Content="srpski"></ComboBoxItem>
+            <ComboBoxItem Content="engleski"></ComboBoxItem>
+        </ComboBox>
+        <Image Margin="573,10,229,371" RenderTransformOrigin="0.793,0.7">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/icons/klinika.png" />
+            </Image.Source>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="KLINIKA ZDRAVLJE" VerticalAlignment="Top" Margin="653,25,0,0" Width="205" Height="39" FontSize="20" FontWeight="Bold" FontStyle="Italic" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="752,77,0,0" TextWrapping="Wrap" Text="Jezik:" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.475,-0.075"/>
+
+    </Grid>
+</Window>

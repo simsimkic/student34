@@ -1,0 +1,25 @@
+﻿<Window x:Class="Aplikacija.dugmeOprema.izmjenaInfoInventar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cmd="clr-namespace:Aplikacija.Commands"
+
+        xmlns:local="clr-namespace:Aplikacija.dugmeOprema"
+        mc:Ignorable="d"
+        Title="Izmjena podataka o inventaru" Height="281.423" Width="413.6" WindowStartupLocation="CenterScreen">
+    
+
+    <Grid>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="252" Stroke="White" VerticalAlignment="Top" Width="409" Margin="0,0,-1.8,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="115,97,0,0" TextWrapping="Wrap" Text="Naziv:" VerticalAlignment="Top" RenderTransformOrigin="-0.972,0.645" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="67,50,0,0" TextWrapping="Wrap" Text="Sifra inventara:" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,142,0,0" TextWrapping="Wrap" Text="Kolicina:" VerticalAlignment="Top" FontSize="15"/>
+        <TextBox x:Name="nazivv"  HorizontalAlignment="Left" Height="23" Margin="193,94,0,0" TextWrapping="Wrap" Text="Stolica" VerticalAlignment="Top" Width="120" FontWeight="Bold"/>
+        <TextBox x:Name="kolicinaa" HorizontalAlignment="Left" Height="23" Margin="193,139,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="120" FontWeight="Bold"/>
+        <TextBlock x:Name="sifra" HorizontalAlignment="Left" Height="23" Margin="193,50,0,0" TextWrapping="Wrap" Text="15sw" VerticalAlignment="Top" Width="120" FontWeight="Bold"/>
+        <Button Content="Odustani" HorizontalAlignment="Left" Margin="234,192,0,0" VerticalAlignment="Top" Width="79" Click="Odustani" />
+        <Button Content="Potvrda" HorizontalAlignment="Left" Margin="100,192,0,0" VerticalAlignment="Top" Width="75" Click="Potvrdi" />
+
+    </Grid>
+</Window>

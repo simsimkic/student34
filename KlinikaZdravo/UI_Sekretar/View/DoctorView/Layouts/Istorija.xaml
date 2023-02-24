@@ -1,0 +1,37 @@
+﻿<Window x:Class="ProjekatHciDoktor.Layouts.Istorija"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Istorija" Height="450" Width="900" WindowStartupLocation="CenterScreen" Background="LightCyan">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="20">
+            <Label Content="Traži datum:"/>
+            <DatePicker  Name="dateD"></DatePicker>
+            <TextBox  Height="30" TextWrapping="Wrap" Text="Traži lekara" FontSize="16" Margin="300,0,10,0" Width="300"/>
+            <Button Width="20" Margin="5">
+                <Image>
+                    <Image.Source>
+                        <BitmapImage UriSource="/images/search.png"/>
+                    </Image.Source>
+                </Image>
+            </Button>
+        </StackPanel>
+        <DataGrid x:Name="ist" RowHeight="40" IsReadOnly="True" Grid.Row="2"
+            SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Left"
+                  VerticalAlignment="Top" ItemsSource="{Binding Pregled}" AlternatingRowBackground="LightCyan" AlternationCount="0" Height="300"
+                  Width="Auto" Margin="20" FontSize="16" Background="LightCyan">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Lekar" Binding="{Binding Path=Lekar}" Width="*" />
+                <DataGridTextColumn Header="Datum" Binding="{Binding Path=Od}" Width="*"/>
+                <DataGridTextColumn Header="Tip" Binding="{Binding Path=Tip}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

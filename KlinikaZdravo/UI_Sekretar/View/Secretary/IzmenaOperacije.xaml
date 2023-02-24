@@ -1,0 +1,89 @@
+﻿<Window x:Class="UI_sekretar.IzmenaOperacije"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:UI_sekretar"
+        mc:Ignorable="d"
+        Title="IzmenaOperacije" 
+        Height="300" 
+        Width="360"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid>
+        <Border Background="White" 
+                BorderBrush="Gainsboro" 
+                BorderThickness="1">
+            <StackPanel Orientation="Vertical"
+                        Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Vreme operacije:"
+                           FontSize="18"
+                           Margin="10,15,0,0"/>
+                    <materialDesign:TimePicker materialDesign:HintAssist.Hint=""
+                                           Height="45"
+                                           Width="175"
+                                           FontSize="15"
+                                           Margin="30,0,0,0"
+                                           x:Name="vreme"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Hirurg:"
+                           FontSize="18"
+                           Margin="10,15,0,0"/>
+                    <ComboBox Style="{StaticResource MaterialDesignComboBox}"
+                              Height="45"
+                              Width="175"
+                              FontSize="15"
+                              Margin="108,0,0,0"
+                              x:Name="hirurg">
+                        <ComboBoxItem Content="Marko Marković"/>
+                        <ComboBoxItem Content="Petar Pertrović"/>
+                        <ComboBoxItem Content="Janko Janković"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Vrsta operacije:"
+                           FontSize="18"
+                           Margin="10,15,0,0"/>
+                    <TextBox Style="{StaticResource MaterialDesignTextBox}"
+                             Height="45"
+                             Width="175"
+                             FontSize="15"
+                             x:Name ="vrsta"
+                             Margin="40,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Broj kartona:"
+                           FontSize="18"
+                           Margin="10,15,0,0"/>
+                    <TextBox Style="{StaticResource MaterialDesignTextBox}"
+                         Height="45"
+                         Width="175"
+                         FontSize="15"
+                             x:Name="brKartona"
+                         Margin="60,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center"
+                            Margin="10,35,0,0">
+                    <Button Name="btnOtkazi"
+                            Height="50" 
+                            Width="150" 
+                            Foreground="White" 
+                            Background="#FF1472E4"
+                            Content="Odustani" 
+                            Click="btnOtkazi_Click"/>
+                    <Button Height="50" 
+                            Width="150" 
+                            Margin="40,0,0,0"
+                            Foreground="White" 
+                            Background="#FF1472E4"
+                            Content="Zakaži operaciju"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

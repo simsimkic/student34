@@ -1,0 +1,160 @@
+﻿<Window x:Class="UI_sekretar.PrivremeniUStalni"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_sekretar"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="PrivremeniUStalni" 
+        Width="290" 
+        Height="600"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border Background="White" 
+                BorderBrush="Gainsboro" 
+                BorderThickness="1">
+            <StackPanel Orientation="Vertical">
+                <TextBox Style="{StaticResource MaterialDesignTextBox}"
+                     Height="45"
+                     Width="195"
+                     FontSize="15"
+                     Margin="0,10,0,0"
+                     Name="txtIme">
+                    <TextBox.Text>
+                        <Binding Path="Ime" 
+                             UpdateSourceTrigger="PropertyChanged" 
+                             NotifyOnValidationError="True">
+                            <Binding.ValidationRules>
+                                <local:Validacija ValidationStep="RawProposedValue"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBox Style="{StaticResource MaterialDesignTextBox}"
+                             Height="45"
+                             Width="185"
+                             FontSize="15"
+                             Margin="0,10,0,0"
+                         Name="txtPrezime">
+                    <TextBox.Text>
+                        <Binding Path="Prezime" 
+                                 UpdateSourceTrigger="PropertyChanged" 
+                                 NotifyOnValidationError="True">
+                            <Binding.ValidationRules>
+                                <local:Validacija ValidationStep="RawProposedValue"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <DatePicker Style="{StaticResource MaterialDesignDatePicker}"
+                            materialDesign:HintAssist.Hint="Datum rođenja"
+                            Width="195"
+                            Height="45"
+                            FontSize="15"
+                            Margin="0,10,0,0"
+                            Name="datum"/>
+                <TextBox Style="{StaticResource MaterialDesignTextBox}"
+                             Height="45"
+                             Width="195"
+                             FontSize="15"
+                             Margin="0,10,0,0"
+                         Name="txtJmbg">
+                    <TextBox.Text>
+                        <Binding Path="Jmbg" 
+                                 UpdateSourceTrigger="PropertyChanged" 
+                                 NotifyOnValidationError="True">
+                            <Binding.ValidationRules>
+                                <local:ValidaciijaBrojevi ValidationStep="RawProposedValue"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBox Style="{StaticResource MaterialDesignTextBox}"
+                         materialDesign:HintAssist.Hint="Adresa stanovanja"
+                             Height="45"
+                             Width="195"
+                             FontSize="15"
+                             Margin="0,10,0,0"
+                         Name="txtAdresa">
+                    <TextBox.Text>
+                        <Binding Path="Adresa" 
+                                 UpdateSourceTrigger="PropertyChanged" 
+                                 NotifyOnValidationError="True">
+                            <Binding.ValidationRules>
+                                <local:ValidacijaAdrese ValidationStep="RawProposedValue"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBox Style="{StaticResource MaterialDesignTextBox}"
+                     Height="45"
+                     Width="195"
+                     FontSize="15"
+                     Margin="0,10,0,0"
+                     Name="txtBroj">
+                    <TextBox.Text>
+                        <Binding Path="BrMob" 
+                             UpdateSourceTrigger="PropertyChanged" 
+                             NotifyOnValidationError="True">
+                            <Binding.ValidationRules>
+                                <local:ValidaciijaBrojevi ValidationStep="RawProposedValue"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBox Style="{StaticResource MaterialDesignTextBox}"
+                         materialDesign:HintAssist.Hint="E-mail adresa"
+                     Height="45"
+                     Width="195"
+                     FontSize="15"
+                     Margin="0,10,0,0"
+                     Name="txtMail">
+                    <TextBox.Text>
+                        <Binding Path="Email" 
+                             UpdateSourceTrigger="PropertyChanged" 
+                             NotifyOnValidationError="True">
+                            <Binding.ValidationRules>
+                                <local:ValidacijaEmail ValidationStep="RawProposedValue"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <TextBox Style="{StaticResource MaterialDesignTextBox}"
+                         materialDesign:HintAssist.Hint="Korisničko ime"
+                     Height="45"
+                     Width="195"
+                     FontSize="15"
+                     Margin="0,10,0,0"
+                     Name="txtKorisnIme">
+                    <TextBox.Text>
+                        <Binding Path="KorisnickoIme" 
+                             UpdateSourceTrigger="PropertyChanged" 
+                             NotifyOnValidationError="True">
+                            <Binding.ValidationRules>
+                                <local:ValidacijaKorisnickoIme ValidationStep="RawProposedValue"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+                <PasswordBox Style="{StaticResource MaterialDesignPasswordBox}"
+                             materialDesign:HintAssist.Hint="Šifra"
+                             Height="45"
+                             Width="195"
+                             FontSize="15"
+                             Margin="0,10,0,0"
+                             Name="txtSifra"/>
+                <Button Height="38" 
+                        Width="210" 
+                        Margin="0, 20"
+                        FontSize="15"
+                        Foreground="White" 
+                        Background="#FF1472E4"
+                        Content="Prebaci u stalni nalog"
+                        Name="btnPrebaci" Click="btnPrebaci_Click">
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="ProjekatHciDoktor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Name="logivanje"
+        Title="Prijava" Height="450" Width="400" WindowStartupLocation="CenterScreen" Cursor="Arrow" ResizeMode="CanMinimize" 
+        Background="LightCyan" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Label x:Key="korisnickoime">Korisničko ime</Label>
+        <Label x:Key="sifra">Šifra</Label>
+    </Window.Resources>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="158.4"/>
+            <ColumnDefinition Width="41.6"/>
+            <ColumnDefinition Width="0*" />
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+
+        </Image>
+        <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" FontSize="24" FontWeight="Bold"  FontFamily="Source Sans Pro Semibold" Height="30" Margin="10,0,0,10"><Run Text="Klinika Zdravo"/></TextBlock>
+        <Label Content="Korisničko ime:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Width="90"/>
+        <Label Content="Šifra:"  Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" Width="35" />
+        <TextBox  x:Name="korisnicko_ime" Grid.Column="1" Grid.Row="2" Margin="1,2,2,1" KeyDown="TextBox_KeyDown" Text="">
+        </TextBox>
+        <PasswordBox x:Name="lozinka" Grid.Column="1" Grid.Row="3" BorderThickness="1" Margin="1,2,2,1" KeyDown="PasswordBox_KeyDown" KeyUp="lozinka_KeyUp">
+        </PasswordBox>
+        <Label x:Name="error" Grid.ColumnSpan="2" Grid.Row="4" Content="" Foreground="Red"/>
+        <CheckBox x:Name="zapamti" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Content="Zapamti me" Height="18" Margin="0.4,16.2,3,15.4" KeyDown="CheckBox_KeyDown"/>
+        <Button x:Name="prijava" Grid.Column="1" Grid.Row="6" Height="Auto" Content="Prijava" Grid.RowSpan="2" Click="Prijava" ToolTip="Prijava na nalog" KeyUp="prijava_KeyUp">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FF319997" Offset="1"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+    
+</Window>

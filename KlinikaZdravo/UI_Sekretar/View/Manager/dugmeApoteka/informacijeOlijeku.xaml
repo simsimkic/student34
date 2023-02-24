@@ -1,0 +1,46 @@
+﻿<Window x:Class="Aplikacija.dugmeApoteka.informacijeOlijeku"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeApoteka"
+        mc:Ignorable="d"
+        Title="informacije O lijeku" Height="624.889" Width="681.414" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,2,30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="688*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="595" Margin="0,0,-0.4,-29.8" Stroke="White" VerticalAlignment="Top" Width="674" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,26,0,0" TextWrapping="Wrap" Text="Naziv lijeka:" VerticalAlignment="Top" FontSize="15" Width="161"/>
+        <TextBox x:Name="sastav" HorizontalAlignment="Left" Height="53" Margin="30,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="612" IsEnabled="False"/>
+        <TextBox x:Name="upotreba" HorizontalAlignment="Left" Height="62" Margin="30,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="612" IsEnabled="False"/>
+        <TextBox x:Name="odobrenje" HorizontalAlignment="Left" Height="49" Margin="30,354,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="612" IsEnabled="False"/>
+        <TextBox x:Name="proizvodjac" HorizontalAlignment="Left" Height="49" Margin="30,428,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="612" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,70,0,0" TextWrapping="Wrap" Text="Sastav:" VerticalAlignment="Top" FontSize="15" Width="161" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,153,0,0" TextWrapping="Wrap" Text="Alergeni:" VerticalAlignment="Top" FontSize="15" Width="161" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,235,0,0" TextWrapping="Wrap" Text="Nacin upotrebe:" VerticalAlignment="Top" FontSize="15" Width="161" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="205" FontWeight="Bold"><Run FontSize="15" Text="Odobrenje "/><Run FontSize="15" Text="doktora "/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="30,403,0,0" TextWrapping="Wrap" Text="Proizvodjac:" VerticalAlignment="Top" FontSize="15" Width="161" FontWeight="Bold"/>
+        <Button Content="Vrati se nazad" HorizontalAlignment="Left" Margin="537,533,0,0" VerticalAlignment="Top" Width="105" Click="nazad" FontSize="15"/>
+        <TextBlock Name="nazivLeka" HorizontalAlignment="Left" Margin="145,26,0,0" TextWrapping="Wrap" Text="NAZIV LIJEKA" VerticalAlignment="Top" FontSize="15" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,100,0,0" TextWrapping="Wrap" Text="BRUFEN 600 mg, film tableta ,INN: ibuprofen,1 film tableta sadrži 600 mg ibuprofena." VerticalAlignment="Top" Height="53" Width="612" IsEnabled="False"/>
+
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Za oralnu primenu.Film tabletu progutati sa tečnošću.Odrasli: preporučena doza iznosi 1200–1800 mg dnevno,
+                       podeljeno u 2-3 doze. Kod nekih pacijenata,dozaodržavanja može biti od 600 do 1200 mg dnevno.U teškim 
+                       ili akutnim stanjima doza se može povećati (sve dok se akutna faza bolesti ne stavi pod kontrolu) " VerticalAlignment="Top" Height="62" Width="610" Margin="35,260,0,0"  />
+          
+                <TextBlock HorizontalAlignment="Left" Margin="30,353,0,0" TextWrapping="Wrap" Text="Mika Mikic-interista" VerticalAlignment="Top" Height="53" Width="612"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,428,0,0" TextWrapping="Wrap" Text="Galenika a.d. u saradnji sa Abbott GMBH Nemačka" VerticalAlignment="Top" Height="53" Width="612"/>
+        <TextBox x:Name="alergeni" HorizontalAlignment="Left" Height="57" Margin="30,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="612" IsEnabled="False"/>
+       
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Text="  a)
+nespecifična alergijska reakcija i anafilaksa, b) reakcije od strane respiratornog trakta uključujući astmu,
+pogoršanje astme, bronhospazam ili dispneja ili c) razni kožni poremećaji uključujući različite tipove osipa,
+ urtikarija, purpura, angioedem i reñe eksfolijativne i bulozne dermatoze "  Height="57" Width="612" 
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+         ScrollViewer.VerticalScrollBarVisibility="Visible"
+         ScrollViewer.CanContentScroll="True" Margin="35,178,0,0" />
+       
+    </Grid>
+</Window>

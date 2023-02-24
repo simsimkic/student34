@@ -1,0 +1,170 @@
+﻿<Page x:Class="healthClinic.MakeAnAppointment"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:healthClinic"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Height="768" Width="1024">
+
+    <Grid Background="#FFB9E8E5" Height="768" Width="1024">
+        <Grid x:Name="header">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Height="66" Click="Button_Click_Back" HorizontalAlignment="Left" Width="104">
+                <Image Source="Images/arrow.png" Height="62" Width="74" RenderTransformOrigin="0.08,0.492"/>
+            </Button>
+            <Label Content="Klinika Zdravo"  Grid.Row="1" Grid.Column="5" FontSize="22" FontWeight="DemiBold" Foreground="DarkBlue" />
+            <Image Source="Images/technology__web__heart__rate_-512.png" Grid.Column="5" Grid.ColumnSpan="2" Margin="133.8,15,19,44.6" Grid.RowSpan="2"/>
+
+        </Grid>
+
+
+        <Grid x:Name="threatment">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Content="Zakazivanje termina" FontWeight="DemiBold" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="35" Foreground="DarkBlue" Margin="49.4,0,35,47" Width="338"/>
+           
+        </Grid>
+
+        <Grid
+            Background="White"
+            Height="450"
+            Width="900"
+            Margin="0,125,0,0">
+            <StackPanel Orientation="Vertical"
+                        Width="500"
+                        HorizontalAlignment="Center"
+                        >
+                <Button VerticalAlignment="Bottom"
+                        FontSize="25" 
+                        Background="{x:Null}"
+                        BorderBrush="LightBlue"
+                        Height="40" 
+                        HorizontalAlignment="Center"  
+                        Foreground="DarkBlue"
+                        Click="Button_Click_Recommend" Margin="112,0">
+                        
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\Korisnik\source\repos\healthClinic\healthClinic\Images\star.png"/>
+                        <TextBlock Text="Preporuka termina"/>
+                    </StackPanel>
+                    
+                </Button>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,50,0,0">
+                <Label Content="Odaberi lekara:" 
+                       HorizontalAlignment="Left"
+                       FontSize="25" 
+                       FontWeight="DemiBold"
+                       Foreground="DarkBlue"
+                       VerticalAlignment="Center"/>
+                    <ComboBox x:Name="cmbBox" Style="{StaticResource MaterialDesignComboBox}"
+                              HorizontalAlignment="Right"
+                              Width="190"
+                              Margin="120,0,0,0"
+                          VerticalAlignment="Center" ContextMenuClosing="ComboBox_ContextMenuClosing">Nikola Nikolic
+                        <ComboBoxItem x:Name="lekarr"/>Pera Peric
+                        <ComboBoxItem/>Jova Jovic
+                        <ComboBoxItem/>
+                </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,50,0,0">
+                <Label Content="Odaberi datum:" 
+                       FontSize="25"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontWeight="DemiBold" 
+                       Foreground="DarkBlue" />
+                <DatePicker x:Name="Kalendar" Style="{StaticResource MaterialDesignDatePicker}" 
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"
+                       Width="190"
+                       Margin="120,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,50,0,0">
+                    <Label Content="Odaberi vreme:" 
+                           FontSize="25"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center" 
+                           FontWeight="DemiBold"
+                           Foreground="DarkBlue" />
+                    <materialDesign:TimePicker x:Name="vreme"
+                           materialDesign:HintAssist.Hint=""
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Right"
+                           Width="190"
+                           Margin="120,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,50,0,0">
+                    <Button Content="Zakaži" 
+                            FontSize="25" 
+                            Height="40"
+                            HorizontalAlignment="Center"
+                            Background="DarkBlue" Width="280"
+                            Margin="120,0,0,0" Click="Button_Click_Accept"/>
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+
+
+
+        <Grid x:Name="glavniProzor" Visibility="Visible" VerticalAlignment="Top" />
+    </Grid>
+</Page>
+

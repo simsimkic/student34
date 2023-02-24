@@ -1,0 +1,40 @@
+﻿<Window x:Class="Aplikacija.dugmeZaposleni.Window6"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija.dugmeZaposleni"
+        mc:Ignorable="d"
+        Title="Window6" Height="542.812" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,3,2,-20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="131*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Name="tema" HorizontalAlignment="Left" Height="520" Stroke="White" VerticalAlignment="Top" Width="790" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="IME :" VerticalAlignment="Top" RenderTransformOrigin="2.1,0.812" Margin="15.077,29,0,0" Width="113" Height="24" FontSize="15" FontWeight="Bold" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="PREZIME :" VerticalAlignment="Top" RenderTransformOrigin="2.1,0.812" Margin="367.077,29,0,0" Width="113" Height="24" FontSize="15" FontWeight="Bold" Grid.Column="1"/>
+        <TextBox x:Name="prezime" Text="Markovic" HorizontalAlignment="Left" Height="23" Margin="367.077,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368" Grid.Column="1"/>
+        <TextBox x:Name="ime" Text="Marko" HorizontalAlignment="Left" Height="23" Margin="15.077,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="2.1,0.812" Margin="15.077,93,0,0" Width="176" Height="24" FontSize="15" FontWeight="Bold" Grid.Column="1"><Run Text="DATUM RODJENJA"/></TextBlock>
+        <DatePicker x:Name="datum" Margin="19.077,115,52,387" SelectedDate="01.07.1980" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="2.1,0.812" Margin="15.077,169,0,0" Width="176" Height="24" FontSize="15" FontWeight="Bold" Grid.Column="1"><Run Text="JMBG :"/></TextBlock>
+        <TextBox x:Name="jmbg" Text="0107998526471" HorizontalAlignment="Left" Height="23" Margin="15.077,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="720" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="2.1,0.812" Margin="15.077,230,0,0" Width="176" Height="24" FontSize="15" FontWeight="Bold" Grid.Column="1"><Run Text="KONTAKT TELEFON :"/></TextBlock>
+        <TextBox x:Name="telefon" Text="068699888" HorizontalAlignment="Left" Height="23" Margin="15.077,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Grid.Column="1"/>
+        <TextBox x:Name="email" Text="marko@gmaol.com" HorizontalAlignment="Left" Height="23" Margin="367.077,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="2.1,0.812" Margin="367.077,230,0,0" Width="176" Height="24" FontSize="15" FontWeight="Bold" Grid.Column="1"><Run Text="EMAIL ADRESA :"/></TextBlock>
+        <ComboBox x:Name="spec" HorizontalAlignment="Left" VerticalAlignment="Top" Width="720" Margin="15.077,330,0,0" Grid.Column="1">
+            <ComboBoxItem Content="opsta praksa" IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem Content="hirurg"></ComboBoxItem>
+            <ComboBoxItem Content="ginekolog"></ComboBoxItem>
+            <ComboBoxItem Content="internista"></ComboBoxItem>
+
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="2.1,0.812" Margin="15.077,301,0,0" Width="324" Height="24" FontSize="15" FontWeight="Bold" Grid.Column="1"><Run Text="SPECIJALIZACIJA :"/></TextBlock>
+        <Button x:Name="Potvrda" Content="Potvrda" HorizontalAlignment="Left" Margin="211.077,403,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="0.44,-0.818" Height="31" Click="potvrda" Grid.Column="1"/>
+        <Button x:Name="odustani" Content="Odustani" HorizontalAlignment="Left" Margin="367.077,403,0,0" VerticalAlignment="Top" Width="113" Height="31" Click="Odustani" Grid.Column="1"/>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="ProjekatHciDoktor.Layouts.TableWeek"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjekatHciDoktor.Layouts"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="1300" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+ 
+        <DataGrid IsReadOnly="True" Grid.Row="2" AutoGenerateColumns="False" HorizontalAlignment="Left" 
+                  Height="520" VerticalAlignment="Top" Width="Auto" Margin="20" FontSize="16" ItemsSource="{Binding Termini}" Background="LightCyan">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="PON" Binding="{Binding Path=NedeljniPON}" Width="*"/>
+                <DataGridTextColumn Header="UTO" Binding="{Binding Path=NedeljniUTO}" Width="*"/>
+                <DataGridTextColumn Header="CET" Binding="{Binding Path=NedeljniCET}" Width="*"/>
+                <DataGridTextColumn Header="PET" Binding="{Binding Path=NedeljniPET}" Width="*"/>
+                <DataGridTextColumn Header="SUB" Binding="{Binding Path=NedeljniSUB}" Width="*"/>
+                <DataGridTextColumn Header="NED" Binding="{Binding Path=NedeljniNED}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

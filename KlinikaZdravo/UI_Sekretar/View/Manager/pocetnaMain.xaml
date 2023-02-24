@@ -1,0 +1,23 @@
+﻿<Window x:Class="Aplikacija.pocetnaMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacija"
+        mc:Ignorable="d"
+        Title="Pocetna strana" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="SkyBlue" HorizontalAlignment="Left" Height="420" Stroke="White" VerticalAlignment="Top" Width="794" Grid.ColumnSpan="2" Margin="0,0,-0.4,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="358,149,0,0" TextWrapping="Wrap" Text="KLINIKA ZDRAVLJE" VerticalAlignment="Top" Height="49" Width="294" FontSize="30" FontFamily="Tempus Sans ITC" FontWeight="Bold"/>
+        <Image Margin="151,115,362.189,194">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/icons/klinika.png" />
+            </Image.Source>
+        </Image>
+        <Button Content="PRIJAVI SE " HorizontalAlignment="Left" Margin="316,254,0,0" VerticalAlignment="Top" Width="162" Height="35" Click="prijava"/>
+    </Grid>
+</Window>
